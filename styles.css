@@ -1,10 +1,13 @@
+/* Styles généraux */
 body {
-    background-color: #2d3e50;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     color: #ffffff;
     text-align: center;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 img {
@@ -21,6 +24,7 @@ p {
     margin: 20px;
 }
 
+/* Responsivité */
 @media (max-width: 600px) {
     p {
         font-size: 1.2em;
@@ -28,4 +32,66 @@ p {
     img {
         max-width: 100px;
     }
+}
+
+/* Animation */
+.fade-in {
+    -webkit-animation-name: fadeInOpacity;
+            animation-name: fadeInOpacity;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Transition */
+.transition_box {
+    width: 500px;
+    margin: 0 auto;
+    background-color: beige;
+    height: 200px;
+    opacity: 0.2;
+    text-align: center;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+}
+
+.transition_box:hover {
+    opacity: 1;
+}
+
+/* Mise en page */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.box {
+    width: 500px;
+    margin: 0 auto;
+    background-color: beige;
+    height: 200px;
+    text-align: center;
 }
