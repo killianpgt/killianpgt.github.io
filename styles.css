@@ -95,3 +95,28 @@ p {
     height: 200px;
     text-align: center;
 }
+
+.gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+}
+.gallery-item {
+            flex: 1 1 calc(33.333% - 20px); /* Trois colonnes */
+            margin: 10px;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+}
+.gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
