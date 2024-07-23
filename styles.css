@@ -96,26 +96,30 @@ p {
 }
 
 .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
 }
+
 .gallery-item {
-            flex: 1 1 calc(33.333% - 20px); /* Trois colonnes */
-            margin: 10px;
-            overflow: hidden;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(33.333% - 20px); /* Trois colonnes */
+    margin: 5px; /* Ajustez la marge */
+    overflow: hidden;
+    border: 1px solid #ddd; /* Ajustez ou supprimez la bordure */
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Inclut la bordure dans les dimensions */
 }
+
 .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
+
 .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
