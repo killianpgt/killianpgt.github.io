@@ -110,3 +110,9 @@ p {
     height: 200px;
     text-align: center;
 }
+
+.transparent-gif {
+    opacity: 0.02;
+    top: -200px;
+    left: 450px;
+        }
