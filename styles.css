@@ -37,6 +37,7 @@ body {
 p {
     font-size: 1.5em;
     margin: 20px;
+    text-align: center;
 }
 
 /* Responsivité */
@@ -115,4 +116,4 @@ p {
     opacity: 0.02;
     top: -200px;
     left: 450px;
-        }
+}
