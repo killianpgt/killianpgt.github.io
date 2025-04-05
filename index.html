@@ -1,17 +1,38 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/killianpgt/killianpgt.github.io/main/image/favicon.ico" />
-    <link rel="stylesheet" href="styles.css">
-    <title>KillianPGT Portfolio</title>
-    <img src="https://raw.githubusercontent.com/killianpgt/killianpgt.github.io/main/image/discordPP.png" alt="Avatar" class="avatar-image" style="margin-top: 20px;" />
-    <p><strong>PufferFish Portfolio</strong></p>
+    <title>Page avec Boutons</title>
+    <style>
+        body {
+            background-color: LightSalmon;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #gif-container {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
- <hr>
-  <div style="word-wrap: break-word; width: 420px; margin-left: auto; margin-right: auto;">
-    <p>I'm an experienced developer with <strong><u>one years</u></strong> of practice in Lua, particularly within Roblox using <strong>Luau</strong>. My expertise lies in creating immersive games and experiences. I'm passionate about innovation.</p>
-  </div>
+    <div id="gif-container">
+        <!-- Placez ici votre gif -->
+        <img src="votre-gif.gif" alt="Gif" width="200">
+    </div>
+    <div>
+        <button>Yes</button>
+        <button>No</button>
+    </div>
 </body>
+</html>
