@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pour la femme de ma vie</title>
+    <title>Page avec Boutons</title>
     <style>
         body {
             background-color: LightSalmon;
@@ -14,28 +14,97 @@
             height: 100vh;
             margin: 0;
         }
-        #gif-container {
-            margin-bottom: 20px;
-        }
+
         button {
             padding: 15px 30px;
             margin: 10px;
             font-size: 16px;
             cursor: pointer;
+            transition: transform 0.3s ease-in-out; /* Animation douce */
+        }
+
+        button#yes {
+            background-color: green;
+            color: white;
+        }
+
+        button#no {
+            background-color: red;
+            color: white;
+        }
+
+        #message {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="gif-container">
-        <!-- Intégration du GIF Tenor -->
-        <div class="tenor-gif-embed" data-postid="22536058" data-share-method="host" data-aspect-ratio="1" data-width="100%">
-            <a href="https://tenor.com/view/bear-kiss-bear-kisses-kiss-kisses-love-gif-22536058">Bear Kiss Bear Kisses Sticker</a> from <a href="https://tenor.com/search/bear+kiss-stickers">Bear Kiss Stickers</a>
-        </div>
-        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <!-- GIF initial -->
+    <div id="gif-container" class="tenor-gif-embed" data-postid="25202245" data-share-method="host" data-aspect-ratio="0.965625" data-width="50%">
+        <a href="https://tenor.com/view/love-you-gif-25202245">Love You Meme</a> from <a href="https://tenor.com/search/love+you-memes">Love You Memes</a>
+    </div> 
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+    <!-- Boutons -->
+    <div id="buttons-container">
+        <button id="yes" aria-label="Dire oui">Yes</button>
+        <button id="no" aria-label="Dire non">No</button>
     </div>
-    <div>
-        <button>Yes</button>
-        <button>No</button>
-    </div>
+
+    <!-- Message après interaction -->
+    <div id="message"></div>
+
+    <script>
+    const maxScale = 5;
+    let currentScale = 1;
+
+    const buttonYes = document.getElementById('yes');
+    const buttonNo = document.getElementById('no');
+    const buttonsContainer = document.getElementById('buttons-container');
+    const gifContainer = document.getElementById('gif-container');
+    const messageDiv = document.getElementById('message');
+
+    buttonYes.addEventListener('click', function () {
+        // Désactiver les boutons
+        buttonYes.disabled = true;
+        buttonNo.disabled = true;
+
+        // Cacher les boutons
+        buttonsContainer.style.display = 'none';
+
+        // Remplacer le GIF (sans <script>)
+        gifContainer.innerHTML = `
+            <div class="tenor-gif-embed" data-postid="22536058" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+                <a href="https://tenor.com/view/bear-kiss-bear-kisses-kiss-kisses-love-gif-22536058">Bear Kiss Bear Kisses Sticker</a><br>
+                <a href="https://tenor.com/search/bear+kiss-stickers">Bear Kiss Stickers</a>
+            </div>
+        `;
+
+        // Injecter dynamiquement le script de Tenor
+        const existingScript = document.querySelector('script[src="https://tenor.com/embed.js"]');
+        if (existingScript) existingScript.remove(); // Supprimer l'ancien script s'il existe
+
+        const newScript = document.createElement('script');
+        newScript.src = "https://tenor.com/embed.js";
+        newScript.async = true;
+        document.body.appendChild(newScript);
+
+        // Afficher un message
+        messageDiv.textContent = "Awww, merci ❤️";
+    });
+
+    buttonNo.addEventListener('click', function () {
+        let newScale = currentScale * 1.5;
+        if (newScale <= maxScale) {
+            currentScale = newScale;
+            buttonYes.style.transform = `scale(${currentScale})`;
+        } else {
+            alert("Le bouton a atteint sa taille maximale !");
+        }
+    });
+</script>
 </body>
 </html>
