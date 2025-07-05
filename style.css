@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+    font-family: 'Sora', sans-serif;
+}
+
+#content {
+    display: flex;
+    align-items: center; /* aligne l’image et le texte au centre verticalement */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.ribbon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px; /* espace entre l’image et le texte */
+}
+
+.text {
+    font-size: 18px;
+}
+
+.fixed-buttons {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    z-index: 1000;
+    font-family: 'Sora', sans-serif;
+}
+
+.fixed-buttons button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    font-weight: 600;
+}
+
+.fixed-buttons button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.fixed-buttons button:hover::after {
+    width: 100%;
+}
+
+.highlight {
+    display: contents;
+    color: white;
+    text-shadow: 0 0 12px rgba(255,255,255,0.8);
+}
+
+#hoverMenu {
+  position: absolute;
+  display: none;
+  background: linear-gradient(135deg, #000000, #25282b);
+  background: rgba(30, 30, 30, .6);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  pointer-events: none; /* Pas cliquable */
+  z-index: 20;
+  max-width: 250px;
+  font-family: 'Sora', sans-serif;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#hoverMenu h4 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+
+#hoverMenu p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+  text-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+#hoverMenu.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto; /* si tu veux rendre le menu interactif */
+}
+
+#hoverMenu {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+#menuImage {
+  width: 88%;
+  border-radius: 10px;
+  margin-top: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  object-fit: contain;
+  display: block;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.card {
+  background: linear-gradient(135deg, #000000, #25282b);
+  background: rgba(30,30,30,0.6);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: scale-down;
+  object-position: center;
+}
+
+.card-content {
+  padding: 15px;
+  color: white;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.card-content p {
+  margin: 0 0 15px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Bouton stylé */
+.fancy-cta {
+  background: rgba(255, 255, 255, 0.023);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  width: 100%;
+  height: 75px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.fancy-cta:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.fancy-cta:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.5);
+}
+
