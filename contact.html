@@ -2,6 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mon site konnar</title>
         <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
@@ -21,28 +22,102 @@
     <button onclick="location.href='contact.html'">Contact</button>
   </div>
 
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 1000px;
+      padding: 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      border-color: #fff;
+      transform: translateY(-5px);
+    }
+
+    .card .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      font-size: 1.2em;
+      color: #fff;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      color: #ccc;
+    }
+
+    .card button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .card button:hover {
+      background: #fff;
+      color: #000;
+    }
+  </style>
+
     </head>
-    <body style="height: 100vh; display: flex; justify-content: center; align-items: center;">
-        <div class="cards-container">
-  <div class="card">
-    <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d718355f9c89eb0fd350_Logo.svg" alt="Image 1">
-    <div class="card-content">
-      <button class="fancy-cta" onclick="window.location.href='https://discord.gg/mA9kgSDCjs'"><p class="highlight">Join my community!</p></button>
+    <body>
+   <div class="container">
+
+    <div class="card">
+      <div class="icon">💬</div>
+      <h3>Join my discord</h3>
+      <p>I post all my projects or leaks here ! And i love eat some frogs !</p>
+      <button onclick="window.open('https://discord.gg/mA9kgSDCjs', '_blank')">Join us</button>
     </div>
-  </div>
-  <div class="card">
-    <img src="https://i.ytimg.com/vi/n8Hpsy7xOLs/maxresdefault.jpg" alt="Image 2" style="object-fit: scale-down;">
-    <div class="card-content">
-      <button class="fancy-cta" onclick="window.location.href='https://www.roblox.com/fr/users/1080643123/profile'" style="justify-content: center;"><p class="highlight">Join my Group!</p></button>
+
+    <div class="card">
+      <div class="icon">🎥</div>
+      <h3>My youtube channel</h3>
+      <p>Come make some views on my videos like tht i become rich hehe ! (and no i won't give you my channel)</p>
+      <button onclick="window.open('https://youtube.com/', '_blank')">See</button>
     </div>
-  </div>
-  <div class="card">
-    <img src="https://lh3.googleusercontent.com/aTzV4KcLXODFwmWxGpdj0XOuIQvxIVQ46PhFQDkoc8aVI3NRK21tC6-GeTV6PLiLaM2Te6paDtwHBE3moBYmWmSycJrOjA3FjRB3caT0WV-86pzZjg=v0-s1260" alt="Image 3" style="object-fit: scale-down;">
-    <div class="card-content">
-      <button class="fancy-cta" onclick="window.location.href='page3.html'"><p class="highlight">I don't think you need that.</p></button>
+
+    <div class="card">
+      <div class="icon">😎</div>
+      <h3>My roblox group</h3>
+      <p>I want some members for have the verify logo !</p>
+      <button onclick="window.open('https://www.roblox.com/fr/communities/34602573/Pufferfish-Army#!/about', '_blank')">See</button>
     </div>
+
   </div>
-</div>
+
 
     </body>
 </html>

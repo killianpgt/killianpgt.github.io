@@ -26,10 +26,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // 📦 Chargement du modèle
   const loader = new THREE.GLTFLoader();
   loader.load(
-    'model.glb',
+    'maxwell_the_cat_dingus.glb',
     (gltf) => {
       model = gltf.scene;
-      model.scale.set(5, 5, 5); // Agrandir si trop petit
+      model.scale.set(1, 1, 1); // Agrandir si trop petit
 
       model.traverse((child) => {
         if (child.isMesh) {
@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const size = box.getSize(new THREE.Vector3()).length();
       const distance = size * 2;
       camera.position.set(0, height * 0.6, distance);
-      camera.lookAt(0, height * 0.6, 0);
+      camera.lookAt(0, height * 1.2, 0);
 
       // 🔄 Animate
       function animate() {
@@ -72,8 +72,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // Rotation douce + rebond
         if (model) {
-          model.rotation.y += 0.005;
-          model.position.y = Math.sin(Date.now() * 0.002) * 0.1;
+          model.rotation.y += 0.01;
+          model.position.y = Math.sin(Date.now() * 0.002) * 2;
         }
 
         const delta = clock.getDelta();
