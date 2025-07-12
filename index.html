@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pufferfish's Portfolio | Roblox Developer</title>
+        <link rel="icon" href="Assets/PFPdiscord.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Version non-module de Three.js -->
+  <script src="Libs/ThreeJS/three.min.js" integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow==" crossorigin="anonymous"></script>
+  <script src="Libs/ThreeJS/GLTFLoader.js"></script>
+  <script src="script.js" defer></script>
+
+</head>
+<body>
+  <div id="content">
+    <img 
+      src="Assets/PFPdiscord.png" 
+      class="ribbon" 
+      alt="ico" 
+    />
+    <div class="text"><b>PufferFish</b></div>
+  </div>
+
+  <div class="fixed-buttons">
+    <button onclick="location.href='index.html'">Accueil</button>
+    <button onclick="location.href='projets.html'">Projets</button>
+    <button onclick="location.href='contact.html'">Contact</button>
+  </div>
+    
+<div id="hoverMenu" class="hoverMenu">
+  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+    <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-92E7A9D3CB5347C0A78C46203857F4EC-Png/420/420/AvatarHeadshot/Png/noFilter"
+         alt="MyIcon"
+         style="width: 32px; height: 32px; border-radius: 50%;">
+    <h4 id="menuTitle" style="margin: 0;">Roblox Profile</h4>
+  </div>
+  <p id="menuDesc" style="margin: 0;">Pageotkillian1</p>
+  <p id="menuMiniDesc" style="margin: 0;"><B><small>Scripter (2 years)</small></B></p>
+  <img id="menuImage"
+       src="https://tr.rbxcdn.com/30DAY-Avatar-92E7A9D3CB5347C0A78C46203857F4EC-Png/420/420/Avatar/Png/noFilter"
+       alt="MyImageOfMyCharacter">
+</div>
+
+<svg id="hoverLine" style="
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 15;
+" width="100%" height="100%">
+  <line x1="0" y1="0" x2="0" y2="0" stroke="white" stroke-width="2" />
+</svg>
+
+
+</body>
+</html>
