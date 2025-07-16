@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <style>
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s ease;
+        }
+
+        .item {
+            width: 500px;
+            border: 1px solid #555;
+            padding: 20px;
+            background-color: rgb(30, 30, 30, .6);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            border-radius: 5px;
+            backdrop-filter: blur(15px);
+        }
+
+        .group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 16px;
+            color: #9cdcfe;
+            margin: 0;
+        }
+
+        .green {
+            color: #4ec9b0;
+        }
+
+        .grey {
+            color: #d4d4d4;
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
+
+        .icons i {
+            font-size: 50px;
+        }
+
+        .group img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .toggle-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(50px);
+        }
+    </style>
+
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+
+    <div class="container" id="menu">
+        <div class="item">
+            <div class="group">
+                <h3 class="green">Acquired language: <span class="grey">LUA</span></h3>
+                <div class="icons">
+                    <i class="devicon-lua-plain"></i>
+                </div>
+            </div>
+
+            <div class="group">
+                <h3 class="green">Currently learning: <span class="grey">HTML / CSS / JS ; C++</span></h3>
+                <div class="icons">
+                    <i class="devicon-html5-plain-wordmark"></i>
+                    <i class="devicon-css3-plain-wordmark"></i>
+                    <i class="devicon-javascript-plain"></i>
+                    <i class="devicon-cplusplus-plain"></i>
+                </div>
+            </div>
+
+            <div class="group">
+                <h3 class="green">Maybe will learn: <span class="grey">PHP</span></h3>
+                <div class="icons">
+                    <i class="devicon-php-plain"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="https://www.emojiall.com/en/header-svg/🔨.svg" alt="toggle button" class="toggle-btn" onclick="toggleMenu()">
+
+    <script>
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+
+        function toggleMenu() {
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
