@@ -11,12 +11,11 @@ const menuDesc = document.getElementById('menuDesc');
 const menuImage = document.getElementById('menuImage');
 
 window.addEventListener('DOMContentLoaded', () => {
-  // 🌌 Scene & caméra
+  
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 20);
   camera.position.set(0, 1.5, 3);
 
-  // 🖥️ Renderer
   renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.domElement.style.position = 'fixed';
@@ -25,12 +24,10 @@ window.addEventListener('DOMContentLoaded', () => {
   renderer.domElement.style.zIndex = '-1';
   document.body.appendChild(renderer.domElement);
 
-  // 💡 Lumière
   const light = new THREE.DirectionalLight(0xffffff, 1);
   light.position.set(0, 2, 2);
   scene.add(light);
 
-  // 📦 Chargement du modèle
   const loader = new THREE.GLTFLoader();
   loader.load(
     'Assets/model.glb',
@@ -59,7 +56,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
       scene.add(model);
 
-      // Animation
       const mixer = new THREE.AnimationMixer(model);
       if (gltf.animations.length > 0) {
         const action = mixer.clipAction(gltf.animations[0]);
@@ -91,7 +87,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   );
 
-  // 📱 Resize
   window.addEventListener('resize', () => {
     if (!camera || !renderer) return;
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -117,7 +112,6 @@ window.addEventListener('mousemove', (event) => {
 
     menuImage.style.display = 'block';
 
-    // 📌 Position 3D → position écran
     const pos = new THREE.Vector3();
     mesh.getWorldPosition(pos);
     pos.project(camera);
@@ -125,12 +119,10 @@ window.addEventListener('mousemove', (event) => {
     const screenX = (pos.x * 0.5 + 0.5) * window.innerWidth;
     const screenY = (-pos.y * 0.5 + 0.5) * window.innerHeight;
 
-    // 📍 Positionner le menu
     hoverMenu.style.display = 'block';
     hoverMenu.style.left = `${event.clientX + 20}px`;
     hoverMenu.style.top = `${event.clientY - 20}px`;
 
-    // 🔗 Ligne SVG entre mesh et souris/menu
     hoverLine.setAttribute('x1', screenX);
     hoverLine.setAttribute('y1', screenY);
     hoverLine.setAttribute('x2', event.clientX);

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PufferFish - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/work.css">
+</head>
+<body>
+
+    <div class="fixed-buttons">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='projets.html'">Projects</button>
+        <button onclick="location.href='contact.html'">Contact</button>
+        <button onclick="location.href='work.html'">Work</button>
+    </div>
+
+    <div id="content">
+        <img src="https://cdn.discordapp.com/avatars/828178385624498196/7ae3280fe0b6f4612f7c45a8417ab115.png?size=1024" class="ribbon" alt="ico" />
+        <div class="text"><b>PufferFish</b></div>
+    </div>
+
+    <div class="portfolio-container">
+    <h1 class="portfolio-title">My Work</h1>
+
+    <h2 class="category-title">System / Gameplay</h2>
+    <div class="category-row">
+        <div class="card" data-id="card1">
+            <div class="card-image">🧊</div>
+            <div class="card-content">
+                <div class="card-title">Mini Map 3D</div>
+                <div class="card-subtitle">Small 3D minimap !</div>
+            </div>
+        </div>
+        <div class="card" data-id="card2">
+            <div class="card-image">⚔️</div>
+            <div class="card-content">
+                <div class="card-title">Boss System</div>
+                <div class="card-subtitle">A boss system for my RPG game !</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="modal-image" id="modalImage"></div>
+            <div class="modal-content">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-buttons">
+                    <button class="modal-button primary" id="viewProject">See the Project</button>
+                    <button class="modal-button secondary" id="viewCode">See the Code</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/work.js"></script>
+</body>
+</html>
