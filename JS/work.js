@@ -11,6 +11,12 @@ const projectData = {
         description: 'A boss system for my RPG game !',
         youtubeId: '-Xf65kSTew8'
     },
+    card3: {
+        emoji: '🔫',
+        title: 'Weapon System',
+        description: 'A small weapon framework !',
+        youtubeId: 'PK8FjV8OIZU'
+    },
 };
 
 const modalOverlay = document.getElementById('modalOverlay');
