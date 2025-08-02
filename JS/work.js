@@ -26,6 +26,11 @@ const projectData = {
         title: 'Doom 64 engine (TS)',
         description: 'A small Doom 64-style engine built in TypeScript',
         youtubeId: 'zMDqt7eKMpE'
+    },
+    cardCOM1: {
+        title: 'Cooking System',
+        description: 'An Cooking System like Burger game ! (got ghosted by the customer😭)',
+        youtubeId: 'zsZfNyYOlAE'
     }
 };
 
