@@ -17,16 +17,6 @@ const projectData = {
         description: 'A small weapon framework !',
         youtubeId: 'PK8FjV8OIZU'
     },
-    cardTS1: {
-        title: 'Square Physic (TS)',
-        description: 'A lightweight 2D engine built with TypeScript',
-        youtubeId: 'MTqOMMLbsw8'
-    },
-    cardTS2: {
-        title: 'Doom 64 engine (TS)',
-        description: 'A small Doom 64-style engine built in TypeScript',
-        youtubeId: 'zMDqt7eKMpE'
-    },
     cardCOM1: {
         title: 'Cooking System',
         description: 'An Cooking System like Burger game ! (got ghosted by the customer😭)',
